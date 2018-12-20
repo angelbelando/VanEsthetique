@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+{% load i18n %}
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+   
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.ico' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/soin.css' %}" />
+<!--     
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css" rel="stylesheet"> -->
+    
+
+  </head>
+  <body style="padding-top:70px; padding-bottom: 70px;">
+    <header class="navbar navbar-expand-md navbar-dark bg-nav-soins fixed-top">
+        <a href="#" class="navbar-brand">
+           <img src="{% static 'img/VanEsthetique_logo.jpg' %}" alt="Logo" width="80" height="50">
+        </a><!--end a.navbar-brand-->
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#contenu-bar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="contenu-bar">
+            <nav class="mr-auto">
+               <ul class="navbar-nav">
+
+                    <li class="nav-item font-weight-bold"><a href="{% url 'index' %}" class="nav-link"><i class="fas fa-home"></i>{% trans " Accueil" %}</a></li>
+                    <li class="nav-item font-weight-bold"><a href="{% url 'contact' %}" class="nav-link"><i class="fas fa-envelope"></i>{% trans " Contact" %} </a></li>
+                   
+               </ul><!--end ul.navbar-nav-->
+            </nav>
+            <form class="form-inline" action="{% url 'set_language' %}" method="POST">
+                <div class="input-group rounded">
+                    {% csrf_token %}
+                    <input name="next" type="hidden" value="">
+                    <select name="language">
+                        {% get_current_language as LANGUAGE_CODE %}
+                        {% get_available_languages as LANGUAGES %}
+                        {% get_language_info_list for LANGUAGES as languages %}
+                        {% for language in languages %}
+                            <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %} class="form-control rounded" >
+                                {{ language.name_local }} ({{ language.code }})
+                            </option>
+                        {% endfor %}
+                    </select>       
+                    <div class="input-group-append">
+                        <button class="btn btn-danger text-white" type="submit">Go</button>
+                    </div>
+                </div><!--end div.input-group in form#searchForm-->
+            </form>
+            
+            <a href="#" class="nav-link text-white"><i class="fab fa-youtube blank"></i></a>
+            <a href="#" class="nav-link text-white"><i class="fab fa-facebook-f blank"></i></a>
+           
+        </div><!--end div#navbar-content.navbar-collapse-->
+   </header><!--End header.navbar-->
+  
+<main>
+
+{% block content %}{% endblock %}
+
+</main>
+
+
+
+<footer>
+        <div class="container-fluid m-3">
+            <div class="row img-fluid">
+                <div class="col-12 text-center">
+                    <p>Copyright &copy; <a href="" target="_blank">Angel Belando</a> {% trans "Pour" %} <a href=" target="_blank">Van'Esthétique</a></p>
+                </div>
+            </div>
+        </div>
+</footer>
+
+<!-- jQuery -->
+<script src="{% static 'js/jquery-3.3.1.slim.min.js' %}"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+<!-- fontawesomet -->
+<script src="{% static 'js/fontawesome-all.min.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+<div class="contenair ml-2 m-1">
+    <div class="row p-2">
+    <div class="col-lg-3 col-md-6 col-sm-12 p-1">
+                    {% if cares_1 %}
+                  <table class="table table-reponsive table-danger table-bordered">
+                      <thead class="">
+                          <tr>
+                            <th>
+                           {% if LANGUAGE_CODE == 'it' %}
+                              {{ family_1_it }}
+                           {% else %}
+                              {{ family_1 }}
+                           {% endif %}
+                            </th>
+                           <th>{% trans "Prix" %}</th>   
+                          </tr>
+                      </thead>
+                      {% for care in cares_1 %}
+                       <tr>
+                            <td>
+                          {% if LANGUAGE_CODE == 'it' %}
+                               {{ care.name_it }} 
+                           {% else %}
+                           {{ care.name }}
+                           {% endif %}
+                           </td>
+                           <td>{{ care.price}}€</td>
+                       </tr>
+                       {% endfor %} 
+                   </table>
+                   {% else %}
+                      
+                        {%  trans "Pas de soins disponibles" %}
+                     
+                  {% endif %}
+        </div>
+          
+     
+        <div class="col-lg-3 col-md-6 col-sm-12 p-1">
+                {% if cares_2 %}
+              <table class="table table-reponsive table-danger table-bordered">
+                  <thead class="">
+                      <tr>
+                        <th>
+                       {% if LANGUAGE_CODE == 'it' %}
+                          {{ family_2_it }}
+                       {% else %}
+                          {{ family_2 }}
+                       {% endif %}
+                        </th>
+                       <th>{% trans "Prix" %}</th>   
+                      </tr>
+                  </thead>
+                  {% for care in cares_2 %}
+                   <tr>
+                        <td>
+                      {% if LANGUAGE_CODE == 'it' %}
+                           {{ care.name_it }} 
+                       {% else %}
+                       {{ care.name }}
+                       {% endif %}
+                       </td>
+                       <td>{{ care.price}}€</td>
+                   </tr>
+                   {% endfor %} 
+               </table>
+               {% else %}
+                  
+                    {%  trans "Pas de soins disponibles" %}
+                 
+              {% endif %}
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-12 p-1">
+            {% if cares_3 %}
+          <table class="table table-reponsive table-danger table-bordered">
+              <thead class="">
+                  <tr>
+                    <th>
+                   {% if LANGUAGE_CODE == 'it' %}
+                      {{ family_3_it }}
+                   {% else %}
+                      {{ family_3 }}
+                   {% endif %}
+                    </th>
+                   <th>{% trans "Prix" %}</th>   
+                  </tr>
+              </thead>
+              {% for care in cares_3 %}
+               <tr>
+                    <td>
+                  {% if LANGUAGE_CODE == 'it' %}
+                       {{ care.name_it }} 
+                   {% else %}
+                   {{ care.name }}
+                   {% endif %}
+                   </td>
+                   <td>{{ care.price}}€</td>
+               </tr>
+               {% endfor %} 
+           </table>
+           {% else %}
+              
+                {%  trans "Pas de soins disponibles" %}
+             
+          {% endif %}
+</div>
+<div class="col-lg-3 col-md-6 col-sm-12 p-1">
+        {% if cares_4 %}
+      <table class="table table-reponsive table-danger table-bordered">
+          <thead class="">
+              <tr>
+                <th>
+               {% if LANGUAGE_CODE == 'it' %}
+                  {{ family_4_it }}
+               {% else %}
+                  {{ family_4 }}
+               {% endif %}
+                </th>
+               <th>{% trans "Prix" %}</th>   
+              </tr>
+          </thead>
+          {% for care in cares_4 %}
+           <tr>
+                <td>
+              {% if LANGUAGE_CODE == 'it' %}
+                   {{ care.name_it }} 
+               {% else %}
+               {{ care.name }}
+               {% endif %}
+               </td>
+               <td>{{ care.price}}€</td>
+           </tr>
+           {% endfor %} 
+       </table>
+       {% else %}
+          
+            {%  trans "Pas de soins disponibles" %}
+         
+      {% endif %}
+</div>
+       
+       
+          
+      </div>
+</div>
