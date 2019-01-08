@@ -147,10 +147,8 @@ admin.site.register(Care)
 ./manage.py createsuperuser
 ```
 ## Internationaliser le site
-### installer [django-modeltranslation](https://django-modeltranslation.readthedocs.io/en/latest/installation.html)
-```bash
-pipenv  install django-modeltranslation
-```
-Suite la documentation de Django_modeltranslation
+
+
 ## modifier le fichier setting.py 
+modifier ce fichier et suivre les instruction sur la[vidéo youtube](https://youtu.be/xI97sLMd1rM)
 
