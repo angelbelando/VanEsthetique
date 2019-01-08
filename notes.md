@@ -39,7 +39,7 @@ DATABASES = {
 ```
 ## Installer le module Python [psycopg2](https://pypi.org/project/psycopg2/) permettant de se connecter à PostgreSQL
 ```console
-pipenv install psycopg2
+pipenv install psycopg2-binary
 ```
 ## lancer la migration de la base de donnée
 ```sh
@@ -158,4 +158,9 @@ faire attention à l'outil PIPENV qui peut faire planter le serveur, si plantage
 ## Extraire les données des modèles d'une application
 ``` bash
 ./manage.py dumpdata soins > soins/dumps/soins.json
+```
+
+## transférer le dépôt GIT sur Heroku 
+``` bash
+git push heroku master
 ```
