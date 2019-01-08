@@ -29,7 +29,7 @@ if os.environ.get('ENV') == 'PROD':
     DEBUG = False
 else:
     DEBUG = True
-    
+DEBUG = True    
 ALLOWED_HOSTS = []
 ALLOWED_HOSTS = ['vanesthetique.herokuapp.com', '127.0.0.1']
 INTERNAL_IPS = ['127.0.0.1', '::1']
