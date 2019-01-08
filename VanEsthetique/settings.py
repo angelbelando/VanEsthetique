@@ -31,7 +31,7 @@ else:
     DEBUG = True
 
 ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['audioviz-fr.VanEsthetique.com', '127.0.0.1']
+ALLOWED_HOSTS = ['vanesthetique.herokuapp.com', '127.0.0.1']
 INTERNAL_IPS = ['127.0.0.1', '::1']
 
 # Application definition
