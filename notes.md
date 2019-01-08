@@ -151,4 +151,7 @@ admin.site.register(Care)
 
 ## modifier le fichier setting.py 
 modifier ce fichier et suivre les instruction sur la[vidéo youtube](https://youtu.be/xI97sLMd1rM)
+## Attention 
+Faire attention au nom de fichier (il faut respecter la case sur linux alors que Windows est plus permitif)
+faire attention à l'outil PIPENV qui peut faire planter le serveur, si plantage ne pas lancer **PIPENV shell** mais uniquement **./manage.py runserver**
 
