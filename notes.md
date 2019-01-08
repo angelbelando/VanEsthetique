@@ -133,7 +133,7 @@ urlpatterns = [
 ./manage.py makemigrations
 ./manage.py migrate
 ```
-## mettrte à jour le fichier admin.py de l'application pour la partie administration
+## mettre à jour le fichier admin.py de l'application pour la partie administration
 ```Python
 from django.contrib import admin
 from .models import Care, Family_Care
@@ -155,3 +155,7 @@ modifier ce fichier et suivre les instruction sur la[vidéo youtube](https://you
 Faire attention au nom de fichier (il faut respecter la case sur linux alors que Windows est plus permitif)
 faire attention à l'outil PIPENV qui peut faire planter le serveur, si plantage ne pas lancer **PIPENV shell** mais uniquement **./manage.py runserver**
 
+## Extraire les données des modèles d'une application
+``` bash
+./manage.py dumpdata soins > soins/dumps/soins.json
+```

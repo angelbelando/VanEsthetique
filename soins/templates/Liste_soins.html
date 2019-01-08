@@ -7,14 +7,14 @@
                   <table class="table table-reponsive table-danger table-bordered">
                       <thead class="">
                           <tr>
-                            <th>
+                            <th class="h4">
                            {% if LANGUAGE_CODE == 'it' %}
                               {{ family_1_it }}
                            {% else %}
                               {{ family_1 }}
                            {% endif %}
                             </th>
-                           <th>{% trans "Prix" %}</th>   
+                           <th class="h4">{% trans "Prix" %}</th>   
                           </tr>
                       </thead>
                       {% for care in cares_1 %}
@@ -43,14 +43,14 @@
               <table class="table table-reponsive table-danger table-bordered">
                   <thead class="">
                       <tr>
-                        <th>
+                        <th class="h4">
                        {% if LANGUAGE_CODE == 'it' %}
                           {{ family_2_it }}
                        {% else %}
                           {{ family_2 }}
                        {% endif %}
                         </th>
-                       <th>{% trans "Prix" %}</th>   
+                       <th class="h4">{% trans "Prix" %}</th>   
                       </tr>
                   </thead>
                   {% for care in cares_2 %}
@@ -77,14 +77,14 @@
           <table class="table table-reponsive table-danger table-bordered">
               <thead class="">
                   <tr>
-                    <th>
+                    <th class="h4">
                    {% if LANGUAGE_CODE == 'it' %}
                       {{ family_3_it }}
                    {% else %}
                       {{ family_3 }}
                    {% endif %}
                     </th>
-                   <th>{% trans "Prix" %}</th>   
+                   <th class="h4">{% trans "Prix" %}</th>   
                   </tr>
               </thead>
               {% for care in cares_3 %}
@@ -111,14 +111,14 @@
       <table class="table table-reponsive table-danger table-bordered">
           <thead class="">
               <tr>
-                <th>
+                <th class="h4">
                {% if LANGUAGE_CODE == 'it' %}
                   {{ family_4_it }}
                {% else %}
                   {{ family_4 }}
                {% endif %}
                 </th>
-               <th>{% trans "Prix" %}</th>   
+               <th class="h4">{% trans "Prix" %}</th>   
               </tr>
           </thead>
           {% for care in cares_4 %}
