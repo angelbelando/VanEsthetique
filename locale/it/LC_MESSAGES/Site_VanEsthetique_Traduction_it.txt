@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-17 11:17+0100\n"
+"POT-Creation-Date: 2019-01-08 14:32+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,36 +27,32 @@ msgid "Italian"
 msgstr "Italiano"
 
 #: .\soins\models.py:5
-msgid "nom en Français"
-msgstr ""
+msgid "nom"
+msgstr "nome"
 
 #: .\soins\models.py:6
 #, fuzzy
 #| msgid "nom du soin it"
-msgid "famille soin en Italien"
+msgid "famille soin it"
 msgstr "nom di cura en Italiano"
 
 #: .\soins\models.py:7
 msgid "description"
 msgstr "descrizione"
 
-#: .\soins\models.py:8 .\soins\models.py:20
+#: .\soins\models.py:8 .\soins\models.py:17
 msgid "ordre affichage"
 msgstr "ordine di visualizzazione"
 
-#: .\soins\models.py:16
-#, fuzzy
-#| msgid "nom du soin it"
-msgid "nom du soin en Français"
+#: .\soins\models.py:13
+msgid "nom du soin"
+msgstr "nome di cura"
+
+#: .\soins\models.py:14
+msgid "nom du soin it"
 msgstr "nom di cura en Italiano"
 
-#: .\soins\models.py:17
-#, fuzzy
-#| msgid "nom du soin it"
-msgid "nom du soin en Italien"
-msgstr "nom di cura en Italiano"
-
-#: .\soins\models.py:19 .\soins\templates\Liste_soins.html:17
+#: .\soins\models.py:16 .\soins\templates\Liste_soins.html:17
 #: .\soins\templates\Liste_soins.html:53 .\soins\templates\Liste_soins.html:87
 #: .\soins\templates\Liste_soins.html:121
 msgid "Prix"
@@ -94,9 +90,3 @@ msgstr "Prenota ora per email"
 #: .\soins\templates\contact.html:22 .\soins\templates\index.html:11
 msgid "ou par téléphone "
 msgstr "o per telefono"
-
-#~ msgid "nom"
-#~ msgstr "nome"
-
-#~ msgid "nom du soin"
-#~ msgstr "nome di cura"

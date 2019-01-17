@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+        <title>Création d'un nouveau projet DJANGO</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css" integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv" crossorigin="anonymous">
+        <style>
+/*--------------------------------------------------------------------------------------------- * Copyright (c) Microsoft Corporation. All rights reserved. * Licensed under the MIT License. See License.txt in the project root for license information. *--------------------------------------------------------------------------------------------*/ body { font-family: "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback"; font-size: 14px; padding: 0 26px; line-height: 22px; word-wrap: break-word; } #code-csp-warning { position: fixed; top: 0; right: 0; color: white; margin: 16px; text-align: center; font-size: 12px; font-family: sans-serif; background-color:#444444; cursor: pointer; padding: 6px; box-shadow: 1px 1px 1px rgba(0,0,0,.25); } #code-csp-warning:hover { text-decoration: none; background-color:#007acc; box-shadow: 2px 2px 2px rgba(0,0,0,.25); } body.scrollBeyondLastLine { margin-bottom: calc(100vh - 22px); } body.showEditorSelection .code-line { position: relative; } body.showEditorSelection .code-active-line:before, body.showEditorSelection .code-line:hover:before { content: ""; display: block; position: absolute; top: 0; left: -12px; height: 100%; } body.showEditorSelection li.code-active-line:before, body.showEditorSelection li.code-line:hover:before { left: -30px; } .vscode-light.showEditorSelection .code-active-line:before { border-left: 3px solid rgba(0, 0, 0, 0.15); } .vscode-light.showEditorSelection .code-line:hover:before { border-left: 3px solid rgba(0, 0, 0, 0.40); } .vscode-light.showEditorSelection .code-line .code-line:hover:before { border-left: none; } .vscode-dark.showEditorSelection .code-active-line:before { border-left: 3px solid rgba(255, 255, 255, 0.4); } .vscode-dark.showEditorSelection .code-line:hover:before { border-left: 3px solid rgba(255, 255, 255, 0.60); } .vscode-dark.showEditorSelection .code-line .code-line:hover:before { border-left: none; } .vscode-high-contrast.showEditorSelection .code-active-line:before { border-left: 3px solid rgba(255, 160, 0, 0.7); } .vscode-high-contrast.showEditorSelection .code-line:hover:before { border-left: 3px solid rgba(255, 160, 0, 1); } .vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before { border-left: none; } img { max-width: 100%; max-height: 100%; } a { text-decoration: none; } a:hover { text-decoration: underline; } a:focus, input:focus, select:focus, textarea:focus { outline: 1px solid -webkit-focus-ring-color; outline-offset: -1px; } hr { border: 0; height: 2px; border-bottom: 2px solid; } h1 { padding-bottom: 0.3em; line-height: 1.2; border-bottom-width: 1px; border-bottom-style: solid; } h1, h2, h3 { font-weight: normal; } h1 code, h2 code, h3 code, h4 code, h5 code, h6 code { font-size: inherit; line-height: auto; } table { border-collapse: collapse; } table > thead > tr > th { text-align: left; border-bottom: 1px solid; } table > thead > tr > th, table > thead > tr > td, table > tbody > tr > th, table > tbody > tr > td { padding: 5px 10px; } table > tbody > tr + tr > td { border-top: 1px solid; } blockquote { margin: 0 7px 0 5px; padding: 0 16px 0 10px; border-left-width: 5px; border-left-style: solid; } code { font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback"; font-size: 14px; line-height: 19px; } body.wordWrap pre { white-space: pre-wrap; } .mac code { font-size: 12px; line-height: 18px; } pre:not(.hljs), pre.hljs code > div { padding: 16px; border-radius: 3px; overflow: auto; } /** Theming */ pre code { color: var(--vscode-editor-foreground); } .vscode-light pre { background-color: rgba(220, 220, 220, 0.4); } .vscode-dark pre { background-color: rgba(10, 10, 10, 0.4); } .vscode-high-contrast pre { background-color: rgb(0, 0, 0); } .vscode-high-contrast h1 { border-color: rgb(0, 0, 0); } .vscode-light table > thead > tr > th { border-color: rgba(0, 0, 0, 0.69); } .vscode-dark table > thead > tr > th { border-color: rgba(255, 255, 255, 0.69); } .vscode-light h1, .vscode-light hr, .vscode-light table > tbody > tr + tr > td { border-color: rgba(0, 0, 0, 0.18); } .vscode-dark h1, .vscode-dark hr, .vscode-dark table > tbody > tr + tr > td { border-color: rgba(255, 255, 255, 0.18); } 
+</style>
+<style>
+/* https://raw.githubusercontent.com/isagalaev/highlight.js/master/src/styles/vs2015.css */ /* * Visual Studio 2015 dark style * Author: Nicolas LLOBERA <nllobera@gmail.com> */ .hljs-keyword, .hljs-literal, .hljs-symbol, .hljs-name { color: #569CD6; } .hljs-link { color: #569CD6; text-decoration: underline; } .hljs-built_in, .hljs-type { color: #4EC9B0; } .hljs-number, .hljs-class { color: #B8D7A3; } .hljs-string, .hljs-meta-string { color: #D69D85; } .hljs-regexp, .hljs-template-tag { color: #9A5334; } .hljs-subst, .hljs-function, .hljs-title, .hljs-params, .hljs-formula { color: #DCDCDC; } .hljs-comment, .hljs-quote { color: #57A64A; font-style: italic; } .hljs-doctag { color: #608B4E; } .hljs-meta, .hljs-meta-keyword, .hljs-tag { color: #9B9B9B; } .hljs-variable, .hljs-template-variable { color: #BD63C5; } .hljs-attr, .hljs-attribute, .hljs-builtin-name { color: #9CDCFE; } .hljs-section { color: gold; } .hljs-emphasis { font-style: italic; } .hljs-strong { font-weight: bold; } /*.hljs-code { font-family:'Monospace'; }*/ .hljs-bullet, .hljs-selector-tag, .hljs-selector-id, .hljs-selector-class, .hljs-selector-attr, .hljs-selector-pseudo { color: #D7BA7D; } .hljs-addition { background-color: #144212; display: inline-block; width: 100%; } .hljs-deletion { background-color: #600; display: inline-block; width: 100%; } /* From https://raw.githubusercontent.com/isagalaev/highlight.js/master/src/styles/vs.css */ /* Visual Studio-like style based on original C# coloring by Jason Diamond <jason@diamond.name> */ .vscode-light .hljs-function, .vscode-light .hljs-params { color: inherit; } .vscode-light .hljs-comment, .vscode-light .hljs-quote, .vscode-light .hljs-variable { color: #008000; } .vscode-light .hljs-keyword, .vscode-light .hljs-selector-tag, .vscode-light .hljs-built_in, .vscode-light .hljs-name, .vscode-light .hljs-tag { color: #00f; } .vscode-light .hljs-string, .vscode-light .hljs-title, .vscode-light .hljs-section, .vscode-light .hljs-attribute, .vscode-light .hljs-literal, .vscode-light .hljs-template-tag, .vscode-light .hljs-template-variable, .vscode-light .hljs-type, .vscode-light .hljs-addition { color: #a31515; } .vscode-light .hljs-deletion, .vscode-light .hljs-selector-attr, .vscode-light .hljs-selector-pseudo, .vscode-light .hljs-meta { color: #2b91af; } .vscode-light .hljs-doctag { color: #808080; } .vscode-light .hljs-attr { color: #f00; } .vscode-light .hljs-symbol, .vscode-light .hljs-bullet, .vscode-light .hljs-link { color: #00b0e8; } .vscode-light .hljs-emphasis { font-style: italic; } .vscode-light .hljs-strong { font-weight: bold; }
+</style>
+<style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'HelveticaNeue-Light', 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <h1 id="cr%C3%A9ation-dun-nouveau-projet-django">Création d'un nouveau projet DJANGO</h1>
+<h2 id="installer-un-environnement-virtuel-avec-pipenv">Installer un environnement virtuel avec <a href="https://pipenv.readthedocs.io/en/latest/">PIPENV</a></h2>
+<pre><code class="language-console"><div>pip install pipenv
+</div></code></pre>
+<h2 id="cr%C3%A9ation-du-projet-van-esthetique">Création du projet Van Esthetique</h2>
+<pre><code class="language-console"><div>django-admin startproject VanEsthetique
+</div></code></pre>
+<h2 id="installer-django-dans-lenvironnement-virtuel">Installer DJANGO dans l'environnement Virtuel</h2>
+<pre><code class="language-console"><div>cd VanEsthetique 
+pipenv install Django
+</div></code></pre>
+<h2 id="cr%C3%A9ation-de-la-base-de-donn%C3%A9e-postgresql">Création de la base de donnée PostgreSQL</h2>
+<pre><code class="language-sql"><div><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">DATABASE</span> <span class="hljs-string">"BD_Soins"</span>
+    <span class="hljs-keyword">WITH</span> 
+    OWNER = <span class="hljs-string">"Angel"</span>
+    <span class="hljs-keyword">ENCODING</span> = <span class="hljs-string">'UTF8'</span>
+    <span class="hljs-keyword">CONNECTION</span> <span class="hljs-keyword">LIMIT</span> = <span class="hljs-number">-1</span>;
+
+<span class="hljs-keyword">COMMENT</span> <span class="hljs-keyword">ON</span> <span class="hljs-keyword">DATABASE</span> <span class="hljs-string">"Soins"</span>
+    <span class="hljs-keyword">IS</span> <span class="hljs-string">'Base de données Soins pour site Multi-langue
+</span></div></code></pre>
+<h2 id="modifier-le-fichier-settingpy-du-projet-afin-de-pointer-vers-la-base-cr%C3%A9%C3%A9e">Modifier le fichier <a href="http://setting.py">setting.py</a> du projet afin de pointer vers la base créée</h2>
+<pre><code class="language-python"><div>DATABASES = {
+        <span class="hljs-string">'default'</span>: {
+        <span class="hljs-string">'ENGINE'</span>: <span class="hljs-string">'django.db.backends.postgresql_psycopg2'</span>, <span class="hljs-comment"># on utilise l'adaptateur postgresql</span>
+        <span class="hljs-string">'NAME'</span>: <span class="hljs-string">'BD_Soins'</span>, <span class="hljs-comment"># le nom de notre base de donnees creee precedemment</span>
+        <span class="hljs-string">'USER'</span>: <span class="hljs-string">'Angel'</span>, <span class="hljs-comment"># attention : remplacez par votre nom d'utilisateur</span>
+        <span class="hljs-string">'PASSWORD'</span>: <span class="hljs-string">'angel'</span>,
+        <span class="hljs-string">'HOST'</span>: <span class="hljs-string">''</span>,
+        <span class="hljs-string">'PORT'</span>: <span class="hljs-string">'5432'</span>,
+    }
+}
+</div></code></pre>
+<h2 id="installer-le-module-python-psycopg2-permettant-de-se-connecter-%C3%A0-postgresql">Installer le module Python <a href="https://pypi.org/project/psycopg2/">psycopg2</a> permettant de se connecter à PostgreSQL</h2>
+<pre><code class="language-console"><div>pipenv install psycopg2-binary
+</div></code></pre>
+<h2 id="lancer-la-migration-de-la-base-de-donn%C3%A9e">lancer la migration de la base de donnée</h2>
+<pre><code class="language-sh"><div>./manage.py migrate
+</div></code></pre>
+<p>Permet de créer les tables PostgreSQL de l'administration Django</p>
+<h2 id="lancer-le-serveur-django-en-local">lancer le serveur DJANGO en local</h2>
+<pre><code class="language-bash"><div>pipenv shell (lancer une seule fois )
+./manage.py runserver
+</div></code></pre>
+<h2 id="cr%C3%A9ation-dapplication-django">création d'application Django</h2>
+<pre><code class="language-bash"><div>./manage.py startapp soins
+</div></code></pre>
+<h2 id="rajouter-lapplication-nouvellement-cr%C3%A9%C3%A9e-dans-le-fichier-settingpy">Rajouter l'application nouvellement créée dans le fichier <a href="http://setting.py">setting.py</a></h2>
+<pre><code class="language-Python"><div>INSTALLED_APPS = [
+    <span class="hljs-string">'django.contrib.admin'</span>,
+    <span class="hljs-string">'django.contrib.auth'</span>,
+    <span class="hljs-string">'django.contrib.contenttypes'</span>,
+    <span class="hljs-string">'django.contrib.sessions'</span>,
+    <span class="hljs-string">'django.contrib.messages'</span>,
+    <span class="hljs-string">'django.contrib.staticfiles'</span>,
+    <span class="hljs-string">'soins'</span>,
+]
+</div></code></pre>
+<h2 id="cr%C3%A9er-le-mod%C3%A8le-de-donn%C3%A9e-soins-%C3%A0-laide-du-fichier-modelspy-de-lapplication-soins">Créer le modèle de donnée Soins à l'aide du fichier <a href="http://models.py">models.py</a> de l'application soins</h2>
+<pre><code class="language-Python"><div><span class="hljs-keyword">from</span> django.db <span class="hljs-keyword">import</span> models
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Family_Care</span><span class="hljs-params">(models.Model)</span>:</span>
+    name = models.CharField(<span class="hljs-string">'nom'</span>, max_length=<span class="hljs-number">64</span>, unique=<span class="hljs-keyword">True</span>)
+    description = models.TextField(<span class="hljs-string">'description'</span>)
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__str__</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">return</span> self.name
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Care</span><span class="hljs-params">(models.Model)</span>:</span>
+    name = models.CharField(<span class="hljs-string">'nom du soin'</span>, max_length=<span class="hljs-number">64</span>, unique=<span class="hljs-keyword">True</span>)
+    family = models.ForeignKey(Family_Care, on_delete=models.CASCADE)
+    price = models.DecimalField(<span class="hljs-string">'Prix'</span> max_digits=<span class="hljs-number">5</span>, decimal_places=<span class="hljs-number">0</span>)
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__str__</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">return</span> self.name
+</div></code></pre>
+<h2 id="cr%C3%A9er-la-vue-index">Créer la vue Index</h2>
+<pre><code class="language-python"><div><span class="hljs-keyword">from</span> django.views <span class="hljs-keyword">import</span> generic
+<span class="hljs-keyword">from</span> .models <span class="hljs-keyword">import</span> Care
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Index</span><span class="hljs-params">(generic.ListView)</span>:</span>
+    model = Care
+    context_object_name = <span class="hljs-string">"cares"</span>
+    template_name = <span class="hljs-string">'index.html'</span>
+    queryset = Care.objects.all().select_related()
+       
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_context_data</span><span class="hljs-params">(self, **kwargs)</span>:</span>
+        context = super().get_context_data(**kwargs)
+        <span class="hljs-keyword">return</span> context
+</div></code></pre>
+<h2 id="cr%C3%A9er-le-dossier-static">Créer le dossier static</h2>
+<p>Copier les fichiers CSS, JS, IMG et FONTS dans des dossier sous le dosier static de l'application</p>
+<h2 id="cr%C3%A9er-les-templates-dans-le-dossier-template">Créer les templates dans le dossier template</h2>
+<p>Créer les templates base.html, liste_soins.html et index.html</p>
+<h2 id="cr%C3%A9er-le-fichier-urlspy-dans-lapplication-soins">Créer le fichier <a href="http://urls.py">urls.py</a> dans l'application Soins</h2>
+<pre><code class="language-Python"><div><span class="hljs-keyword">from</span> django.urls <span class="hljs-keyword">import</span> path
+<span class="hljs-keyword">from</span> . <span class="hljs-keyword">import</span> views
+app_name = <span class="hljs-string">'soins'</span>
+urlpatterns = [
+    path(<span class="hljs-string">''</span>, views.Index.as_view(), name=<span class="hljs-string">'index'</span>),
+]
+</div></code></pre>
+<h2 id="modifier-le-fichier-urlspy-du-projet">Modifier le fichier <a href="http://urls.py">urls.py</a> du projet</h2>
+<pre><code class="language-Python"><div><span class="hljs-keyword">from</span> django.urls <span class="hljs-keyword">import</span> include, path
+<span class="hljs-keyword">from</span> django.contrib <span class="hljs-keyword">import</span> admin
+<span class="hljs-keyword">from</span> soins  <span class="hljs-keyword">import</span> views
+urlpatterns = [
+    path(<span class="hljs-string">''</span>, views.Index.as_view(), name=<span class="hljs-string">'index'</span>),
+    path(<span class="hljs-string">'admin/'</span>, admin.site.urls, name=<span class="hljs-string">'admin'</span>),
+    path(<span class="hljs-string">'soins/'</span>, include(<span class="hljs-string">'soins.urls'</span>, namespace=<span class="hljs-string">'soins'</span>)),
+]
+</div></code></pre>
+<h2 id="lancer-la-g%C3%A9n%C3%A9ration-du-fichier-migration-n%C3%A9cessaire-%C3%A0-la-cr%C3%A9ation-de-la-base-de-donn%C3%A9e">Lancer la génération du fichier Migration (nécessaire à la création de la base de donnée)</h2>
+<pre><code class="language-bash"><div>./manage.py makemigrations
+./manage.py migrate
+</div></code></pre>
+<h2 id="mettre-%C3%A0-jour-le-fichier-adminpy-de-lapplication-pour-la-partie-administration">mettre à jour le fichier <a href="http://admin.py">admin.py</a> de l'application pour la partie administration</h2>
+<pre><code class="language-Python"><div><span class="hljs-keyword">from</span> django.contrib <span class="hljs-keyword">import</span> admin
+<span class="hljs-keyword">from</span> .models <span class="hljs-keyword">import</span> Care, Family_Care
+
+admin.site.register(Family_Care)
+admin.site.register(Care)
+</div></code></pre>
+<h2 id="cr%C3%A9er-le-super-user-pour-ladministration-du-site">Créer le super user pour l'administration du site</h2>
+<pre><code class="language-bash"><div>./manage.py createsuperuser
+</div></code></pre>
+<h2 id="internationaliser-le-site">Internationaliser le site</h2>
+<ul>
+<li>Extraire les textes à traduire dans le fichier locale/it/LC_MESSAGES/django.po en lançant la commande</li>
+</ul>
+<pre><code class="language-bash"><div>./manage.py makemessages -l it  [messages en Italien]
+</div></code></pre>
+<ul>
+<li>Modifier le fichier locale/it/LC_MESSAGES/django.po à l'aide d'un éditeur de texte
+<em>Traduire en italien les balises msgstr</em></li>
+</ul>
+<pre><code class="language-gettext"><div>#: .\VanEsthetique\settings.py:139
+msgid &quot;Italian&quot;
+msgstr &quot;Italiano&quot;
+</div></code></pre>
+<ul>
+<li>Compiler le fichier locale/it/LC_MESSAGES/django.po (génération .mo) en lançant la commande</li>
+</ul>
+<pre><code class="language-bash"><div>./manage.py compilemessages -l it  [messages en Italien]
+</div></code></pre>
+<h2 id="modifier-le-fichier-settingpy">modifier le fichier <a href="http://setting.py">setting.py</a></h2>
+<p>modifier ce fichier et suivre les instruction sur la<a href="https://youtu.be/xI97sLMd1rM">vidéo youtube</a></p>
+<h2 id="attention">Attention</h2>
+<p>Faire attention au nom de fichier (il faut respecter la case sur linux alors que Windows est plus permitif)
+faire attention à l'outil PIPENV qui peut faire planter le serveur, si plantage ne pas lancer <strong>PIPENV shell</strong> mais uniquement <strong>./manage.py runserver</strong></p>
+<h2 id="extraire-les-donn%C3%A9es-des-mod%C3%A8les-dune-application">Extraire les données des modèles d'une application</h2>
+<pre><code class="language-bash"><div>./manage.py dumpdata soins &gt; soins/dumps/soins.json
+</div></code></pre>
+<h2 id="transf%C3%A9rer-le-d%C3%A9p%C3%B4t-git-sur-heroku-apr%C3%A8s-commit-du-d%C3%A9p%C3%B4t-local">transférer le dépôt GIT sur Heroku (après commit du dépôt local)</h2>
+<pre><code class="language-bash"><div>git push heroku master
+</div></code></pre>
+<h2 id="changement-des-donn%C3%A9es-extraites-au-format-json-dans-mod%C3%A8le-application-sur-serveur-heroku">Changement des données extraites au format JSON dans modèle application sur serveur HEROKU</h2>
+<pre><code class="language-bash"><div>heroku run python manage.py loaddata soins/dumps/soins.json
+</div></code></pre>
+
+    </body>
+    </html>

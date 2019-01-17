@@ -143,10 +143,33 @@ admin.site.register(Care)
 ```
 
 ## Créer le super user pour l'administration du site
+
 ```bash
 ./manage.py createsuperuser
 ```
+
 ## Internationaliser le site
+
+* Extraire les textes à traduire dans le fichier locale/it/LC_MESSAGES/django.po en lançant la commande
+  
+```bash 
+./manage.py makemessages -l it  [messages en Italien]
+```
+
+* Modifier le fichier locale/it/LC_MESSAGES/django.po à l'aide d'un éditeur de texte
+  *Traduire en italien les balises msgstr*
+``` gettext
+#: .\VanEsthetique\settings.py:139
+msgid "Italian"
+msgstr "Italiano"
+```
+
+* Compiler le fichier locale/it/LC_MESSAGES/django.po (génération .mo) en lançant la commande
+  
+```bash 
+./manage.py compilemessages -l it  [messages en Italien]
+```
+
 
 
 ## modifier le fichier setting.py 
@@ -160,7 +183,13 @@ faire attention à l'outil PIPENV qui peut faire planter le serveur, si plantage
 ./manage.py dumpdata soins > soins/dumps/soins.json
 ```
 
-## transférer le dépôt GIT sur Heroku 
+## transférer le dépôt GIT sur Heroku (après commit du dépôt local)
+
 ``` bash
 git push heroku master
+```
+
+## Changement des données extraites au format JSON dans modèle application sur serveur HEROKU
+``` bash
+heroku run python manage.py loaddata soins/dumps/soins.json
 ```
