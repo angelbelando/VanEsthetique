@@ -10,6 +10,7 @@ django-admin startproject VanEsthetique
 ## Installer DJANGO dans l'environnement Virtuel
 ```console
 cd VanEsthetique 
+pipenv --python 3.6
 pipenv install Django
 ```
 
