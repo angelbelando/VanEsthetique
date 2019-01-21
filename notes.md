@@ -135,6 +135,7 @@ urlpatterns = [
 ./manage.py migrate
 ```
 ## mettre à jour le fichier admin.py de l'application pour la partie administration
+
 ```Python
 from django.contrib import admin
 from .models import Care, Family_Care
@@ -191,6 +192,15 @@ git push heroku master
 ```
 
 ## Changement des données extraites au format JSON dans modèle application sur serveur HEROKU
+
 ``` bash
 heroku run python manage.py loaddata soins/dumps/soins.json
+```
+
+## création d'une clé secrète
+
+```python
+import random, string
+
+"".join([random.choice(string.printable) for _ in range(24)])
 ```
