@@ -3,5 +3,5 @@ VanEsthetique/__pycache__/
 soins/__pycache__/
 soins/migrations/__pycache__/
 .vscode/
-VanEsthetique/settings/prod.
+VanEsthetique/settings/prod.py
 .env
