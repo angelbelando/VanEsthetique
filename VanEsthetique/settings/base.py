@@ -71,7 +71,16 @@ WSGI_APPLICATION = 'VanEsthetique.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-
+DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2', # on utilise l'adaptateur postgresql
+            'NAME': 'bd_vanesthetique', # le nom de notre base de donnees creee precedemment
+            'USER': 'angel', # attention : remplacez par votre nom d'utilisateur
+            'PASSWORD': '',
+            'HOST': '',
+            'PORT': '5432',
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
