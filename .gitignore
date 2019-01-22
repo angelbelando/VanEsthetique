@@ -4,4 +4,5 @@ soins/__pycache__/
 soins/migrations/__pycache__/
 .vscode/
 VanEsthetique/settings/prod.py
+VanEsthetique/settings/heroku_env.py
 .env
