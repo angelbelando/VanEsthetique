@@ -20,13 +20,19 @@
                       {% for care in cares_1 %}
                        <tr>
                             <td>
-                          {% if LANGUAGE_CODE == 'it' %}
+                           {% if LANGUAGE_CODE == 'it' %}
                                {{ care.name_it }} 
                            {% else %}
-                           {{ care.name }}
+                                {{ care.name }}
                            {% endif %}
                            </td>
-                           <td>{{ care.price}}€</td>
+                           <td>
+                            {% if LANGUAGE_CODE == 'it' %}
+                                {{ care.price_it}} 
+                            {% else %}
+                                {{ care.price}}€
+                            {% endif %}  
+                           </td>
                        </tr>
                        {% endfor %} 
                    </table>
@@ -62,7 +68,13 @@
                        {{ care.name }}
                        {% endif %}
                        </td>
-                       <td>{{ care.price}}€</td>
+                       <td>
+                        {% if LANGUAGE_CODE == 'it' %}
+                            {{ care.price_it}} 
+                        {% else %}
+                            {{ care.price}}€
+                        {% endif %}  
+                         </td>
                    </tr>
                    {% endfor %} 
                </table>
@@ -96,7 +108,13 @@
                    {{ care.name }}
                    {% endif %}
                    </td>
-                   <td>{{ care.price}}€</td>
+                   <td>
+                    {% if LANGUAGE_CODE == 'it' %}
+                        {{ care.price_it}} 
+                    {% else %}
+                        {{ care.price}}€
+                    {% endif %}  
+                    </td>
                </tr>
                {% endfor %} 
            </table>
@@ -130,7 +148,13 @@
                {{ care.name }}
                {% endif %}
                </td>
-               <td>{{ care.price}}€</td>
+               <td>
+                {% if LANGUAGE_CODE == 'it' %}
+                    {{ care.price_it}} 
+                {% else %}
+                    {{ care.price}}€
+                {% endif %}  
+                </td>
            </tr>
            {% endfor %} 
        </table>

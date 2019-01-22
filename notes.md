@@ -204,3 +204,6 @@ pipenv install django-jet
 ``` 
 
 [Suivre les instructions de la documentation de JET]((https://jet.readthedocs.io/en/latest/))
+
+Reproduire sur le serveur de production 
+et surtout lancer la commande : 

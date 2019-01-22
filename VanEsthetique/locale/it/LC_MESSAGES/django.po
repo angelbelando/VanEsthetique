@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-08 14:32+0100\n"
+"POT-Creation-Date: 2019-01-22 16:33+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,49 +18,65 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\VanEsthetique\settings.py:138
+#: .\VanEsthetique\settings\base.py:124
 msgid "French"
 msgstr "Francese"
 
-#: .\VanEsthetique\settings.py:139
+#: .\VanEsthetique\settings\base.py:125
+#, fuzzy
+#| msgid "Italian"
 msgid "Italian"
-msgstr "Italiano"
+msgstr "Prezzo Italiano"
 
 #: .\soins\models.py:5
-msgid "nom"
-msgstr "nome"
+msgid "nom en Français"
+msgstr ""
 
 #: .\soins\models.py:6
 #, fuzzy
 #| msgid "nom du soin it"
-msgid "famille soin it"
+msgid "famille soin en Italien"
 msgstr "nom di cura en Italiano"
 
 #: .\soins\models.py:7
 msgid "description"
 msgstr "descrizione"
 
-#: .\soins\models.py:8 .\soins\models.py:17
+#: .\soins\models.py:8 .\soins\models.py:21
 msgid "ordre affichage"
 msgstr "ordine di visualizzazione"
 
-#: .\soins\models.py:13
-msgid "nom du soin"
-msgstr "nome di cura"
-
-#: .\soins\models.py:14
-msgid "nom du soin it"
+#: .\soins\models.py:16
+#, fuzzy
+#| msgid "nom du soin it"
+msgid "nom du soin en Français"
 msgstr "nom di cura en Italiano"
 
-#: .\soins\models.py:16 .\soins\templates\Liste_soins.html:17
-#: .\soins\templates\Liste_soins.html:53 .\soins\templates\Liste_soins.html:87
-#: .\soins\templates\Liste_soins.html:121
+#: .\soins\models.py:17
+#, fuzzy
+#| msgid "nom du soin it"
+msgid "nom du soin en Italien"
+msgstr "nom di cura en Italiano"
+
+#: .\soins\models.py:19
+msgid "Prix Français"
+msgstr "Prezzo Francese"
+
+#: .\soins\models.py:20
+#, fuzzy
+#| msgid "Italian"
+msgid "Prix Italien"
+msgstr "Prezzo Italiano"
+
+#: .\soins\templates\Liste_soins.html:17 .\soins\templates\Liste_soins.html:59
+#: .\soins\templates\Liste_soins.html:99
+#: .\soins\templates\Liste_soins.html:139
 msgid "Prix"
 msgstr "Prezzo"
 
-#: .\soins\templates\Liste_soins.html:35 .\soins\templates\Liste_soins.html:71
-#: .\soins\templates\Liste_soins.html:105
-#: .\soins\templates\Liste_soins.html:139
+#: .\soins\templates\Liste_soins.html:41 .\soins\templates\Liste_soins.html:83
+#: .\soins\templates\Liste_soins.html:123
+#: .\soins\templates\Liste_soins.html:163
 #, fuzzy
 #| msgid "Pas de soins"
 msgid "Pas de soins disponibles"
@@ -90,3 +106,9 @@ msgstr "Prenota ora per email"
 #: .\soins\templates\contact.html:22 .\soins\templates\index.html:11
 msgid "ou par téléphone "
 msgstr "o per telefono"
+
+#~ msgid "nom"
+#~ msgstr "nome"
+
+#~ msgid "nom du soin"
+#~ msgstr "nome di cura"
