@@ -197,10 +197,10 @@ git push heroku master
 heroku run python manage.py loaddata soins/dumps/soins.json
 ```
 
-## création d'une clé secrète
+## instattations de django-jet pour administrer le site
 
-```python
-import random, string
+```bash
+pipenv install django-jet
+``` 
 
-"".join([random.choice(string.printable) for _ in range(24)])
-```
+[Suivre les instructions de la documentation de JET]((https://jet.readthedocs.io/en/latest/))

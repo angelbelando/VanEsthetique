@@ -11,6 +11,7 @@ from django.utils.translation import ugettext as _
 from django.contrib import admin
 from soins  import views
 urlpatterns = [
+    path('jet/', include('jet.urls', 'jet')),
     path('admin/', admin.site.urls),
     re_path(r'^i18n/', include('django.conf.urls.i18n')), 
     path('', views.Index.as_view(), name='index'),

@@ -12,6 +12,7 @@ dj-database-url = "*"
 gunicorn = "*"
 whitenoise = "*"
 psycopg2-binary = "*"
+django-jet = "*"
 
 [requires]
 python_version = "3.6"
