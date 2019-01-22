@@ -15,7 +15,7 @@ class Family_Care(models.Model):
 class Care(models.Model):
     name = models.CharField(verbose_name=_('nom du soin en Français'), max_length=64, unique=True)
     name_it = models.CharField(verbose_name=_('nom du soin en Italien'), max_length=64, blank=True)
-    family = models.ForeignKey(Family_Care, on_delete=models.CASCADE)
+    family = models.ForeignKey(Family_Care, on_delete=models.CASCADE, verbose_name=_('Famille de soins'))
     price = models.DecimalField(verbose_name=_('Prix Français'), max_digits=5, decimal_places=0, blank=True)
     price_it = models.DecimalField(verbose_name=_('Prix Italien'), max_digits=5, decimal_places=0, blank=True)
     display_order = models.IntegerField(verbose_name=_('ordre affichage'), blank=True)
