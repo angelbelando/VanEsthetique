@@ -1,8 +1,7 @@
-/Brouillon
+.env
 VanEsthetique/__pycache__/
-soins/__pycache__/
-soins/migrations/__pycache__/
+Vanesthetique/soins/__pycache__/
+Vanesthetique/soins/migrations/__pycache__/
 .vscode/
 VanEsthetique/settings/prod.py
 VanEsthetique/settings/heroku_env.py
-/.env
