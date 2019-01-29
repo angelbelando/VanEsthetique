@@ -1,0 +1,28 @@
+
+{% extends "base.html" %}
+{% load wagtailcore_tags wagtailimages_tags %}
+
+{% block body_class %}template-blogpage{% endblock %}
+
+{% block content %}
+<main class="container-fluid mb-4" >
+        <section class="row my-1">
+            <div class="col-12">		 
+               <article class="mb-1">		  
+                     <h1 class="h2">{{ page.title}}</h1>
+                     <h1 class="h3">{{ page.intro}}</h1>
+                     <p>{{ page.body|richtext }}
+                     </p>
+                        {% for item in page.gallery_images.all %}
+                            <div style="float: left; margin: 10px">
+                                {% image item.image fill-640x480 %}
+                                <p>{{ item.caption }}</p>
+                            </div>
+                        {% endfor %}
+               </article> <!--End article-->
+            </div><!--End first column-->
+        </section><!--end section.row-->
+    </main>
+    <p><a href="{{ page.get_parent.url }}"> <i class="fas fa-chevron-circle-left"></i> Retour </a></p>
+
+{% endblock %}

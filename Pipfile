@@ -13,6 +13,7 @@ gunicorn = "*"
 whitenoise = "*"
 psycopg2-binary = "*"
 django-jet = "*"
+wagtail = "*"
 
 [requires]
 python_version = "3.6"

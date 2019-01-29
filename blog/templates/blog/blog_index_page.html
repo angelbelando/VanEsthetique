@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags wagtailimages_tags %}
+
+{% block body_class %}template-blogindexpage{% endblock %}
+
+{% block content %}
+ 
+    <main class="container-fluid p-1" >
+            <div class="intro">{{ page.intro|richtext }}</div>
+		<section class="row my-4">
+
+				<div class="col-12 ">
+						{% if blogpages %}
+                        {% for post in blogpages %}
+                        {% with post=post.specific %}
+                        
+						<div class="list-group list-group-flush mb-3">
+								<article class="list-group-item list-group-item-action">
+									 <div class="row">
+                                            <div class="col12 col-md-2 ">
+                                            {% with post.main_image as main_image %}
+													{% if main_image %}
+													<a class="lightbox" href="{% pageurl post %}">
+															{% image main_image class="img-fluid img-thumbnail" fill-300x200 %}
+													</a>
+													
+													{% endif %}
+                                                {% endwith %}
+                                            </div>	 
+											 <div class="col12 col-md-10">
+														<a href="{% pageurl post %}"><h1 class="h3">{{ post.title }}</h1></a>
+														<p>{{ post.specific.body|richtext }}</p>
+														<!-- <a href="{{ post.get_absolute_url }}" class="btn bg-nav-film text-white mt-auto">En savoir plus</a> -->
+											 </div><!---End second column of Article-->
+									 </div>
+								</article><!--end article.list-group-item-->
+                        </div><!--End div.list-group-->
+                        {% endwith %}
+						{% endfor %}
+						{% else %}
+						<p>Désolé mais il n'a y pas de news pour le moment.</p>
+						{% endif %}
+				</div><!--End first column-->
+		</section><!--end section.row-->
+</main><!--end main.container-fluid-->
+
+{% endblock %}

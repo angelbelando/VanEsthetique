@@ -2,12 +2,12 @@
 {% load i18n %}
 {% load static %}
 {% block content %}
-<div class="bg-image">
+
         <main class="container-fluid" >
                 <article class="m-0">
                         <div class="row d-flex border">     
                                 <div class="col-sm-12 col-lg-2">
-                                        <img  class="img-fluid rounded float-left d-block mr-4 mt-2" src="{% static 'img/VanEsthetique.jpg' %}" alt="VanESthetique">     
+                                        <img  class="rounded float-left d-block mr-4 mt-2" src="{% static 'img/VanEsthetique.jpg' %}" alt="VanESthetique" width="480"height="200">     
                                 </div>              
                                 <div class="col-sm-12 col-lg-10">
                                 <h1 class="color-soins h1 text-center">Van'Esthétique</h1> 
@@ -22,14 +22,15 @@
                                         <span> {% trans "ou par téléphone " %} 
                                         <a href="tel:+33611046341"><i class="fas fa-phone"></i></a>   
                                             </span>
-                                            <br>
-                                            <br>
-                                            <br>
-                                    </p>
-                                 </div>
+                                        </p>
+                                </div>
+                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11528.999774958382!2d7.41380532872384!3d43.746906203575655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12cdc2636800aa91%3A0xf0a2a597600742c6!2s06240+Beausoleil!5e0!3m2!1sfr!2sfr!4v1548780131905" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>   
+                                   
+                                
+                                 
                                     
                 </article>
             </main>         
-</div>
+
 
 {% endblock %}
