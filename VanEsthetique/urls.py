@@ -14,20 +14,21 @@ from django.utils.translation import ugettext as _
 from django.contrib import admin
 from soins  import views
 urlpatterns = [
-    re_path(r'^admin-cms/', include(wagtailadmin_urls)),
-    re_path(r'^admin-soins/', admin.site.urls),
-    path('jet/', include('jet.urls', 'jet')),
+    re_path(r'^admin/', admin.site.urls),
+ 
     path('', views.Index.as_view(), name='index'),
     path('soins/', include('soins.urls', namespace='soins')),
     path('contact/', TemplateView.as_view(template_name='contact.html'), name='contact'),
     re_path(r'^i18n/', include('django.conf.urls.i18n')), 
     
 #wagtail
-
+  
+    re_path(r'^soins-admin/', admin.site.urls),
     re_path(r'^documents/', include(wagtaildocs_urls)),
     re_path(r'', include(wagtail_urls)),
+    re_path(r'^cms-admin/', include(wagtailadmin_urls)),
 
-     
+    path('jet/', include('jet.urls', 'jet')),
 ]
 # urlpatterns += i18n_patterns(
 #     path('', views.Index.as_view(), name='index'),
