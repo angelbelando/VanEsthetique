@@ -20,7 +20,7 @@ urlpatterns = [
     re_path(r'^i18n/', include('django.conf.urls.i18n')), 
     
 #wagtail
-  
+    re_path(r'^cms-admin/', include(wagtailadmin_urls)),
     re_path(r'^soins-admin/', admin.site.urls),
     re_path(r'^documents/', include(wagtaildocs_urls)),
     re_path(r'', include(wagtail_urls)),
