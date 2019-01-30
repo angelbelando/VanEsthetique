@@ -96,7 +96,7 @@ msgstr " Home"
 
 #: .\soins\templates\base.html:33
 msgid " Blog"
-msgstr "Blog"
+msgstr " Blog"
 
 #: .\soins\templates\base.html:34
 msgid " Contact"
