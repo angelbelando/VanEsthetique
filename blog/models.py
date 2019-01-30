@@ -60,8 +60,10 @@ class BlogPage(Page):
         'body_fr',
     )
     search_fields = Page.search_fields + [
-        index.SearchField('intro'),
-        index.SearchField('body'),
+        index.SearchField('intro_fr'),
+        index.SearchField('body_fr'),
+        index.SearchField('intro_it'),
+        index.SearchField('body_it'),
     ]
 
     content_panels = Page.content_panels + [
