@@ -34,7 +34,16 @@
                     <li class="nav-item font-weight-bold"><a href="{% url 'contact' %}" class="nav-link"><i class="fas fa-envelope"></i>{% trans " Contact" %} </a></li>
                </ul><!--end ul.navbar-nav-->
             </nav>
-
+            {% comment %}
+            <form class="form-inline" id="searchForm" action="{% url 'search' %}" method="get">
+                <div class="input-group">      
+                   <input type="search" name="query"{% if search_query %} value="{{ search_query }}"{% endif %} class="form-control" placeholder="Rechercher" >
+                   <div class="input-group-append">
+                       <button class="btn"><i class="fas fa-search"></i></button>
+                   </div>
+                </div><!--end div.input-group in form#searchForm-->
+             </form><!--end form#searchForm-->
+             {% endcomment %}
             <!-- <a href="#" class="nav-link text-white"><i class="fab fa-youtube blank"></i></a> -->
             <a href="#" class="nav-link text-white"><i class="fab fa-facebook-f blank"></i></a>        
         </div><!--end div#navbar-content.navbar-collapse-->

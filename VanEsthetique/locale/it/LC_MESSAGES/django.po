@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-30 09:03+0100\n"
+"POT-Creation-Date: 2019-01-30 16:09+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,6 +27,10 @@ msgstr "Francese"
 #| msgid "Italian"
 msgid "Italian"
 msgstr "Prezzo Italiano"
+
+#: .\blog\templates\blog\blog_page.html:27
+msgid "Retour à la liste"
+msgstr "Torna alla lista"
 
 #: .\soins\models.py:5
 msgid "nom en Français"
@@ -91,8 +95,8 @@ msgid " Accueil"
 msgstr " Home"
 
 #: .\soins\templates\base.html:33
-msgid " Articles"
-msgstr " Articulos"
+msgid " Blog"
+msgstr "Blog"
 
 #: .\soins\templates\base.html:34
 msgid " Contact"
@@ -102,22 +106,25 @@ msgstr " Contatto"
 msgid "Pour"
 msgstr "Per"
 
-#: .\soins\templates\contact.html:19
+#: .\soins\templates\contact.html:18
 msgid ""
-"Esthéticienne diplômée vous propose les soins ci-dessous sur rendez-vous."
+"Esthéticienne diplômée vous propose des soins à domicile sur rendez-vous."
 msgstr "Laureato estetista offre le cure di seguito su appuntamento."
 
-#: .\soins\templates\contact.html:20
+#: .\soins\templates\contact.html:21
 msgid "Réservez dès maintenant par email"
 msgstr "Prenota ora per email"
 
-#: .\soins\templates\contact.html:22
+#: .\soins\templates\contact.html:23
 msgid "ou par téléphone "
 msgstr "o per telefono"
 
 #: .\soins\templates\index.html:7
 msgid "SOINS ET ÉPILATION À DOMICILE SUR LA RIVIERA"
 msgstr "CURA E RIMOZIONE A CASA SULLA RIVIERA"
+
+#~ msgid " Articles"
+#~ msgstr " Articulos"
 
 #~ msgid "nom"
 #~ msgstr "nome"

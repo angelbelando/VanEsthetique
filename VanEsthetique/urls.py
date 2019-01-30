@@ -9,6 +9,7 @@ from django.views.generic import TemplateView
 from wagtail.admin import urls as wagtailadmin_urls
 from wagtail.documents import urls as wagtaildocs_urls
 from wagtail.core import urls as wagtail_urls
+from search import views as search_views
 from django.utils.translation import ugettext as _
 
 from django.contrib import admin
@@ -20,6 +21,7 @@ urlpatterns = [
     re_path(r'^i18n/', include('django.conf.urls.i18n')), 
     
 #wagtail
+    re_path(r'^search/$', search_views.search, name='search'),
     re_path(r'^cms-admin/', include(wagtailadmin_urls)),
     re_path(r'^soins-admin/', admin.site.urls),
     re_path(r'^documents/', include(wagtaildocs_urls)),
