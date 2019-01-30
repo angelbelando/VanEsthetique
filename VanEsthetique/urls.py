@@ -14,8 +14,6 @@ from django.utils.translation import ugettext as _
 from django.contrib import admin
 from soins  import views
 urlpatterns = [
-    re_path(r'^admin/', admin.site.urls),
- 
     path('', views.Index.as_view(), name='index'),
     path('soins/', include('soins.urls', namespace='soins')),
     path('contact/', TemplateView.as_view(template_name='contact.html'), name='contact'),
