@@ -14,6 +14,7 @@ from django.utils.translation import ugettext as _
 from django.contrib import admin
 from soins  import views
 urlpatterns = [
+    re_path(r'^admin-soins/', admin.site.urls),
     path('jet/', include('jet.urls', 'jet')),
     path('', views.Index.as_view(), name='index'),
     path('soins/', include('soins.urls', namespace='soins')),
@@ -21,8 +22,8 @@ urlpatterns = [
     re_path(r'^i18n/', include('django.conf.urls.i18n')), 
     
 #wagtail
-    re_path(r'^django-admin/', admin.site.urls),
-    re_path(r'^admin/', include(wagtailadmin_urls)),
+  
+    re_path(r'^admin-blog/', include(wagtailadmin_urls)),
     re_path(r'^documents/', include(wagtaildocs_urls)),
     re_path(r'', include(wagtail_urls)),
 

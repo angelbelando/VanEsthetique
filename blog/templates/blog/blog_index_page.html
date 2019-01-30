@@ -6,7 +6,7 @@
 {% block content %}
  
     <main class="container-fluid p-1" >
-            <div class="intro">{{ page.intro|richtext }}</div>
+        
 		<section class="row my-4">
 
 				<div class="col-12 ">
@@ -28,7 +28,7 @@
                                                 {% endwith %}
                                             </div>	 
 											 <div class="col12 col-md-10">
-														<a href="{% pageurl post %}"><h1 class="h3">{{ post.title }}</h1></a>
+														<a href="{% pageurl post %}"><h1 class="h3">{{ post.specific.intro }}</h1></a>
 														<p>{{ post.specific.body|richtext }}</p>
 														<!-- <a href="{{ post.get_absolute_url }}" class="btn bg-nav-film text-white mt-auto">En savoir plus</a> -->
 											 </div><!---End second column of Article-->

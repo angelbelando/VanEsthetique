@@ -8,6 +8,18 @@ from wagtail.core.models import Page, Orderable
 from modelcluster.fields import ParentalKey
 from wagtail.documents.models import Document
 from wagtail.documents.edit_handlers import DocumentChooserPanel
+from django.utils import translation
+
+class TranslatedField:
+    def __init__(self, en_field, fr_field):
+        self.en_field = en_field
+        self.fr_field = fr_field
+
+    def __get__(self, instance, owner):
+        if translation.get_language() == 'fr':
+            return getattr(instance, self.fr_field)
+        else:
+            return getattr(instance, self.en_field)
 
 class BlogIndexPage(Page):
     intro = RichTextField(blank=True)
@@ -26,9 +38,11 @@ class BlogIndexPage(Page):
 
 class BlogPage(Page):
     date = models.DateField("Post date")
-    intro = models.CharField(max_length=250)
-    body = RichTextField(blank=True)
-    
+    intro_fr = models.CharField(max_length=255)
+    intro_it = models.CharField(max_length=255)
+    body_fr = RichTextField(blank=True)
+    body_it = RichTextField(blank=True)
+
     def main_image(self):
         gallery_item = self.gallery_images.first()
         if gallery_item:
@@ -36,6 +50,15 @@ class BlogPage(Page):
         else:
             return None
 
+    intro = TranslatedField(
+        'intro_it',
+        'intro_fr',
+    )
+
+    body = TranslatedField(
+        'body_it',
+        'body_fr',
+    )
     search_fields = Page.search_fields + [
         index.SearchField('intro'),
         index.SearchField('body'),
@@ -43,8 +66,11 @@ class BlogPage(Page):
 
     content_panels = Page.content_panels + [
         FieldPanel('date'),
-        FieldPanel('intro'),
-        FieldPanel('body', classname="full"),
+        FieldPanel('intro_fr'),
+        FieldPanel('intro_it'),
+        # FieldPanel('intro'),
+        FieldPanel('body_fr', classname="full"),
+        FieldPanel('body_it', classname="full"),
         InlinePanel('gallery_images', label="Gallery images"),
 
     ]
@@ -60,3 +86,6 @@ class BlogPageGalleryImage(Orderable):
         ImageChooserPanel('image'),
         FieldPanel('caption'),
     ]
+
+
+

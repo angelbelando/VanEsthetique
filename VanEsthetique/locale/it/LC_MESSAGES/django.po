@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-22 16:33+0100\n"
+"POT-Creation-Date: 2019-01-30 09:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\VanEsthetique\settings\base.py:124
+#: .\VanEsthetique\settings\base.py:145
 msgid "French"
 msgstr "Francese"
 
-#: .\VanEsthetique\settings\base.py:125
+#: .\VanEsthetique\settings\base.py:146
 #, fuzzy
 #| msgid "Italian"
 msgid "Italian"
@@ -30,7 +30,7 @@ msgstr "Prezzo Italiano"
 
 #: .\soins\models.py:5
 msgid "nom en Français"
-msgstr ""
+msgstr "nome en Francese"
 
 #: .\soins\models.py:6
 #, fuzzy
@@ -58,6 +58,10 @@ msgstr "nom di cura en Italiano"
 msgid "nom du soin en Italien"
 msgstr "nom di cura en Italiano"
 
+#: .\soins\models.py:18
+msgid "Famille de soins"
+msgstr "Famiglia di cure"
+
 #: .\soins\models.py:19
 msgid "Prix Français"
 msgstr "Prezzo Francese"
@@ -82,30 +86,38 @@ msgstr "Prezzo"
 msgid "Pas de soins disponibles"
 msgstr "none di cura"
 
-#: .\soins\templates\base.html:31
+#: .\soins\templates\base.html:32
 msgid " Accueil"
 msgstr " Home"
 
-#: .\soins\templates\base.html:32
+#: .\soins\templates\base.html:33
+msgid " Articles"
+msgstr " Articulos"
+
+#: .\soins\templates\base.html:34
 msgid " Contact"
 msgstr " Contatto"
 
-#: .\soins\templates\base.html:77
+#: .\soins\templates\base.html:79
 msgid "Pour"
 msgstr "Per"
 
-#: .\soins\templates\contact.html:19 .\soins\templates\index.html:8
+#: .\soins\templates\contact.html:19
 msgid ""
 "Esthéticienne diplômée vous propose les soins ci-dessous sur rendez-vous."
 msgstr "Laureato estetista offre le cure di seguito su appuntamento."
 
-#: .\soins\templates\contact.html:20 .\soins\templates\index.html:9
+#: .\soins\templates\contact.html:20
 msgid "Réservez dès maintenant par email"
 msgstr "Prenota ora per email"
 
-#: .\soins\templates\contact.html:22 .\soins\templates\index.html:11
+#: .\soins\templates\contact.html:22
 msgid "ou par téléphone "
 msgstr "o per telefono"
+
+#: .\soins\templates\index.html:7
+msgid "SOINS ET ÉPILATION À DOMICILE SUR LA RIVIERA"
+msgstr "CURA E RIMOZIONE A CASA SULLA RIVIERA"
 
 #~ msgid "nom"
 #~ msgstr "nome"
