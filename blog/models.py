@@ -74,7 +74,6 @@ class BlogPage(Page):
         FieldPanel('body_fr', classname="full"),
         FieldPanel('body_it', classname="full"),
         InlinePanel('gallery_images', label="Gallery images"),
-
     ]
 
 class BlogPageGalleryImage(Orderable):
