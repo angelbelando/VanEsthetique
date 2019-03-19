@@ -1,10 +1,10 @@
 {% load i18n %}
 {% get_current_language as LANGUAGE_CODE %}
 <div class="contenair ml-2 m-1">
-    <div class="row p-2">
+<div class="row p-2">
     <div class="col-lg-3 col-md-6 col-sm-12 p-1">
                     {% if cares_1 %}
-                  <table class="table table-reponsive table-light table-bordered">
+                  <table class="table table-responsive table-light table-bordered">
                       <thead class="bg-nav-soins text-white">
                           <tr>
                             <th class="h4">
@@ -27,11 +27,9 @@
                            {% endif %}
                            </td>
                            <td>
-                            {% if LANGUAGE_CODE == 'it' %}
-                                {{ care.price_it}}€
-                            {% else %}
+                           
                                 {{ care.price}}€
-                            {% endif %}  
+                            
                            </td>
                        </tr>
                        {% endfor %} 
@@ -46,7 +44,7 @@
      
         <div class="col-lg-3 col-md-6 col-sm-12 p-1">
                 {% if cares_2 %}
-              <table class="table table-reponsive table-light table-bordered">
+              <table class="table table-responsive table-light table-bordered">
                   <thead class="bg-nav-soins text-white">
                       <tr>
                         <th class="h4">
@@ -56,7 +54,7 @@
                           {{ family_2 }}
                        {% endif %}
                         </th>
-                       <th class="h4">{% trans "Prix" %}</th>   
+                       <th class="h4">{% trans "Prix" %} </th>   
                       </tr>
                   </thead>
                   {% for care in cares_2 %}
@@ -69,11 +67,9 @@
                        {% endif %}
                        </td>
                        <td>
-                        {% if LANGUAGE_CODE == 'it' %}
-                            {{ care.price_it}}€
-                        {% else %}
+                     
                             {{ care.price}}€
-                        {% endif %}  
+                      
                          </td>
                    </tr>
                    {% endfor %} 
@@ -109,11 +105,9 @@
                    {% endif %}
                    </td>
                    <td>
-                    {% if LANGUAGE_CODE == 'it' %}
-                        {{ care.price_it}}€
-                    {% else %}
+                   
                         {{ care.price}}€
-                    {% endif %}  
+                
                     </td>
                </tr>
                {% endfor %} 
@@ -123,10 +117,10 @@
                 {%  trans "Pas de soins disponibles" %}
              
           {% endif %}
-</div>
-<div class="col-lg-3 col-md-6 col-sm-12 p-1">
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-12 p-1">
         {% if cares_4 %}
-      <table class="table table-reponsive table-light table-bordered">
+      <table class="table table-responsive table-light table-bordered">
           <thead class="bg-nav-soins text-white">
               <tr>
                 <th class="h4">
@@ -149,11 +143,9 @@
                {% endif %}
                </td>
                <td>
-                {% if LANGUAGE_CODE == 'it' %}
-                    {{ care.price_it}}€
-                {% else %}
+              
                     {{ care.price}}€
-                {% endif %}  
+           
                 </td>
            </tr>
            {% endfor %} 
@@ -163,9 +155,6 @@
             {%  trans "Pas de soins disponibles" %}
          
       {% endif %}
+    </div>
 </div>
-       
-       
-          
-      </div>
 </div>

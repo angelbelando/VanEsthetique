@@ -20,8 +20,10 @@
   </head>
   <body style="padding-top:70px; padding-bottom: 70px;">
     <header class="navbar navbar-expand-md navbar-dark bg-nav-soins fixed-top">
-        <a href="#" class="navbar-brand">
+        <a href="#" class="navbar-brand font-weight-bold">Sweety Beauty
+           {% comment %}
            <img src="{% static 'img/VanEsthetique_logo.jpg' %}" alt="Logo" width="80" height="50">
+           {% endcomment %}
         </a><!--end a.navbar-brand-->
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#contenu-bar">
             <span class="navbar-toggler-icon"></span>
@@ -85,7 +87,7 @@
         <div class="container-fluid m-3">
             <div class="row img-fluid">
                 <div class="col-12 text-center">
-                    <p>Copyright &copy; <a href="" target="_blank">Angel Belando</a> {% trans "Pour" %} <a href=" target="_blank">Van'Esthétique</a></p>
+                    <p>Copyright &copy; <a href="http://www.angel-belando.fr">Angel Belando</a> {% trans "Pour" %} <a href="{% url 'index' %}">Sweety Beauty</a></p>
                 </div>
             </div>
         </div>
