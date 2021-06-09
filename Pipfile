@@ -7,7 +7,7 @@ verify_ssl = true
 
 [packages]
 django-debug-toolbar = "*"
-django = "==2.2.3"
+django = "==2.2.22"
 dj-database-url = "*"
 gunicorn = "*"
 whitenoise = "*"
